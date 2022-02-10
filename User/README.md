@@ -10,5 +10,5 @@ Execute the code in terminal:
 
 ## Migration
 Create a migration repository `flask db init`
-- Run migration `flask db migrate`
+- Run migration `flask db migrate -m '<message>'`
 - Apply the migration `flask db upgrade`
