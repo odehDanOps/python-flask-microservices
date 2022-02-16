@@ -36,3 +36,4 @@ services:
       - micro_network
     volumes:
     - productdb_vol:/var/lib/mysql
+    
