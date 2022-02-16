@@ -15,11 +15,11 @@ class User(UserMixin, db.Model):
     is_admin = db.Column(db.Boolean, default=False)
     authenticated = db.Column(db.Boolean, default=False)
     api_key = db.Column(db.String(255), unique=True, nullable=True)
-    date_added = db.Column(db.DateTime, default=datetime.utcnow)
-    date_updated = db.Column(db.DateTime, onupdate=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=datetime.now)
+    updated_at = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)
 
     def encode_api_key(self):
-        self.api_key = sha256_crypt.hash(self.username + str(datetime.utcnow))
+        self.api_key = sha256_crypt.hash(self.username + str(datetime.now))
 
     def encode_password(self):
         self.password = sha256_crypt.hash(self.password)
