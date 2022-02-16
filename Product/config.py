@@ -6,7 +6,6 @@ if os.path.exists(dotenv_path):
     load_dotenv(dotenv_path)
 
 class Config:
-    SECRET_KEY = "9Qj2adAU5iCuK45eWNcfeA"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class DevelopmentConfig(Config):
