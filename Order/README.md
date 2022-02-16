@@ -18,8 +18,8 @@ flask db upgrade
 ```
 docker network ls
 docker network create --driver bridge micro_network (skip if already created)
-docker build -t product-srv .
-docker run -p 5002:5002 --detach --name product-service --net=micro_network product-srv
+docker build -t order-srv .
+docker run -p 5003:5003 --detach --name order-service --net=micro_network order-srv
 ```
 
 ## Using 'flask shell' to access flask application
