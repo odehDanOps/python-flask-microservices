@@ -15,7 +15,7 @@ services:
   user-api:
     container_name: cuser-service
     build:
-      context: ../user-service
+      context: ../User
     ports:
     - "5001:5001"
     depends_on:
@@ -42,7 +42,7 @@ services:
   product-api:
     container_name: cproduct-service
     build:
-      context: ../product-service
+      context: ../Product
     ports:
     - "5002:5002"
     depends_on:
@@ -69,7 +69,7 @@ services:
   order-api:
     container_name: corder-service
     build:
-      context: ../order-service
+      context: ../Order
     ports:
     - "5003:5003"
     depends_on:

@@ -13,11 +13,12 @@ class DevelopmentConfig(Config):
     ENV = "development"
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:''@localhost:3306/micro_user_dev'
+    # SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://danops:danops_2022@host.docker.internal:3306/user'
     SQLALCHEMY_ECHO = True
 
 
 class ProductionConfig(Config):
     ENV = "production"
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://danops:danops_2022@host.docker.internal:3306/user'
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://danops:danops_2022@user-db:3306/user'
     SQLALCHEMY_ECHO = False
